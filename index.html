@@ -67,10 +67,10 @@
         :root.light-theme .glass-panel { box-shadow: 0 4px 16px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8); }
         :root.light-theme .ctrl-btn { background: rgba(255,255,255,0.7); border-color: rgba(0,0,0,0.1); color: #333; }
         :root.light-theme .ctrl-btn:hover { background: var(--color-primary); color: #fff; }
-        :root.light-theme .stage-container::before { background: linear-gradient(135deg, rgba(99,102,241,0.15), transparent 80%, rgba(168,85,247,0.1)); }
+        :root.light-theme .stage-container::before { background: linear-gradient(135deg, rgba(99,102,241,0.15), transparent 10%, rgba(168,85,247,0.1)); }
         :root.light-theme select { background-color: rgba(255,255,255,0.9); color: #111; }
         :root.light-theme select option { background-color: #fff; color: #111; }
-        .stage-container { position: relative; } .stage-container::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; background: linear-gradient(135deg, rgba(99,102,241,0.3), transparent 80%, rgba(168,85,247,0.2)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; z-index: 1; opacity: 0.6; } body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: var(--bg-base); background-image: radial-gradient(ellipse at 20% 0%, rgba(99,102,241,0.12) 0%, transparent 50%), radial-gradient(ellipse at 80% 100%, rgba(168,85,247,0.10) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(99,102,241,0.03) 0%, transparent 70%); color: var(--text-main); }
+        .stage-container { position: relative; } .stage-container::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; background: linear-gradient(135deg, rgba(99,102,241,0.3), transparent 10%, rgba(168,85,247,0.2)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; z-index: 1; opacity: 0.6; } body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: var(--bg-base); background-image: radial-gradient(ellipse at 20% 0%, rgba(99,102,241,0.12) 0%, transparent 50%), radial-gradient(ellipse at 80% 100%, rgba(168,85,247,0.10) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(99,102,241,0.03) 0%, transparent 70%); color: var(--text-main); }
         select { background-color: rgba(15,15,15,0.9); color: #ededed; padding: 6px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); }
         select option { background-color: #111; color: #ededed; }
         #sidebarSection { transition: width 0.3s ease, opacity 0.2s ease, padding 0.3s ease, margin 0.3s ease; }
@@ -106,9 +106,9 @@
         .player-float-controls { position: absolute; top: 12px; right: 12px; z-index: 30; display: flex; align-items: center; gap: 6px; opacity: 0; transform: translateY(-6px); transition: opacity 0.4s ease, transform 0.4s ease; pointer-events: none; }
         .player-float-controls.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
         .stage-container:hover .player-float-controls { opacity: 1; transform: translateY(0); pointer-events: auto; }
-        .ctrl-btn { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); background: rgba(10,10,20,0.5); backdrop-filter: blur(24px) saturate(1.5); -webkit-backdrop-filter: blur(24px) saturate(1.5); color: rgba(255,255,255,0.85); cursor: pointer; transition: all 0.2s; outline: none; box-shadow: 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06); }
+        .ctrl-btn { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); background: rgba(10,10,20,0.5); backdrop-filter: blur(10px) saturate(1.5); -webkit-backdrop-filter: blur(1px) saturate(1.5); color: rgba(255,255,255,0.85); cursor: pointer; transition: all 0.2s; outline: none; box-shadow: 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06); }
         .ctrl-btn:hover { background: var(--color-primary); border-color: var(--color-primary-hover); color: #fff; box-shadow: 0 4px 24px var(--color-primary-focus-alpha), inset 0 1px 0 rgba(255,255,255,0.15); transform: scale(1.08); }
-        .glass-panel { background: var(--bg-surface); backdrop-filter: blur(40px) saturate(1.8); -webkit-backdrop-filter: blur(40px) saturate(1.8); border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05); }
+        .glass-panel { background: var(--bg-surface); backdrop-filter: blur(40px) saturate(1.8); -webkit-backdrop-filter: blur(10px) saturate(1.8); border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05); }
         .tooltip { position: relative; }
         .tooltip:before { content: attr(data-tip); position: absolute; bottom: 125%; left: 50%; transform: translateX(-50%); padding: 4px 8px; background: rgba(0,0,0,0.8); color: #fff; font-size: 10px; border-radius: 4px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
         .tooltip:hover:before { opacity: 1; }
@@ -122,15 +122,15 @@
 <body class="h-full flex flex-col overflow-hidden antialiased selection:bg-indigo-500/30">
 
     <!-- Header -->
-    <header class="glass-panel border-b border-borderColor px-3 py-2 flex flex-wrap items-center justify-between shrink-0 gap-2 z-20 relative">
+    <header class="glass-panel border-b border-borderColor px-3 py-2 flex flex-wrap items-center justify-between shrink-0 gap-2 z-20 relative ">
         <!-- Left: Logo + Settings -->
         <div class="flex items-center gap-2 min-w-0 shrink-0">
             <div class="bg-primary text-white p-2 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-primary/20">
-                <i class="fa-solid fa-tv text-xs"></i>
+                <i class="fa-solid fa-tv text-sm"></i>
             </div>
             <h1 class="text-xl font-extrabold tracking-tight text-main text-primary-light">VNTV</h1>
             <button onclick="toggleAboutModal(true)" class="text-muted hover:text-primary transition p-0.5" title="Thông tin"><i class="fa-solid fa-circle-info text-[10px]"></i></button>
-            <button onclick="toggleSettingsModal(true)" class="bg-variant hover:bg-variantHover text-main p-1.5 rounded-lg transition border border-borderColor flex items-center justify-center w-8 h-8 "><i class="fa-solid fa-plus text-[10px]"></i></button>
+            <button onclick="toggleSettingsModal(true)" class="bg-variant hover:bg-variantHover text-main p-1.5 rounded-lg transition border border-borderColor flex items-center justify-center w-8 h-8 "><i class="fa-solid fa-plus text-[15px]"></i></button>
             <button onclick="toggleTheme()" class="bg-variant hover:bg-variantHover text-main p-1.5 rounded-lg transition border border-borderColor flex items-center justify-center w-8 h-8"><i id="themeToggleIconMobile" class="fa-solid fa-moon text-[10px]"></i></button>
         </div>
 
@@ -195,7 +195,6 @@
             <!-- EPG Container -->
             <div class="flex-1 overflow-y-auto p-2 space-y-2 hidden" id="sidebarEpgContainer"></div>
 
-            
             <!-- Multiview (inside sidebar) -->
             <div id="multiviewBar" class="flex flex-wrap items-center gap-1.5 px-3 py-2 border-t border-borderColor bg-footer/50 shrink-0">
                 <span class="text-[8px] font-bold text-muted uppercase tracking-wider mr-1">Đa Màn Hình:</span>
@@ -218,11 +217,11 @@
 
         <!-- Toggle Sidebar -->
         <button id="sidebarToggleBtn" onclick="toggleSidebar()" class="hidden md:flex absolute left-[300px] top-[48%] -translate-y-1/2 z-30 w-4 h-8 glass-panel hover:bg-variantHover border border-borderColor text-main rounded-full items-center justify-center shadow-lg transition" style="margin-left: -8px;">
-            <i id="sidebarToggleIcon" class="fa-solid fa-chevron-left text-[8px]"></i>
+            <i id="sidebarToggleIcon" class="fa-solid fa-chevron-left text-[px]"></i>
         </button>
 
         <!-- Player -->
-        <section class="w-full flex-none md:flex-1 flex flex-col bg-black/80 md:bg-surface/40 backdrop-blur-2xl rounded-xl border border-white/[0.06] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.04)] relative stage-container z-0 min-w-0 aspect-video md:aspect-auto">
+        <section class="w-full flex-none md:flex-1 flex flex-col bg-black/80 md:bg-surface/40 backdrop-blur-2xl rounded-xl border border-white/[0.06] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.04)] relative stage-container z-0 min-w-0 aspect-video md:aspect-auto sticky top-0 z-20">
             <div class="flex-1 relative bg-black overflow-hidden">
                 <div id="multiviewGrid" class="multiview-grid grid-cols-1">
                     <div id="mvSlot0" class="multiview-box active-slot" onclick="selectSlot(0)">
@@ -268,8 +267,8 @@
     </main>
 
     <!-- MODALS -->
-    <div id="settingsModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
-        <div class="bg-dialogBg border border-borderColor rounded-2xl w-full max-w-md shadow-2xl overflow-hidden">
+    <div id="settingsModal" class="hidden fixed inset-0 bg-black/10 backdrop-blur z-10 flex items-center justify-center p-4">
+        <div class="bg-dialogBg border border-borderColor rounded-2xl w-full max-w-md shadow-2xl overflow-hidden bg-black/10 backdrop-blur z-10">
             <div class="px-5 py-4 border-b border-borderColor/50 flex items-center justify-between bg-variant/20">
                 <h3 class="text-xs font-extrabold text-main tracking-wider uppercase flex items-center gap-1.5"><i class="fa-solid fa-sliders text-primary"></i> Thêm nguồn phát & EPG</h3>
                 <button onclick="toggleSettingsModal(false)" class="text-muted hover:text-main transition w-7 h-7 rounded-full hover:bg-variant flex items-center justify-center"><i class="fa-solid fa-xmark text-sm"></i></button>
@@ -279,7 +278,7 @@
                 <div class="space-y-2">
                     <h4 class="text-[10px] font-extrabold text-primary uppercase tracking-wider">Màu Chủ Đề</h4>
                     <div class="flex gap-2 flex-wrap mt-1">
-                        <button onclick="applyCustomColor('#6366f1')" class="w-8 h-8 rounded-full bg-[#6366f1] border-2 border-white/10 hover:border-white/80 transition" title="Indigo"></button>
+                        <button onclick="applyCustomColor('#6366f1')" class="w-8 h-8 rounded-full bg-[#6366f1] border-2 border-white/10 hover:border-white/80 transition" title="Indigo [darkmode]"></button>
                         <button onclick="applyCustomColor('#875cff')" class="w-8 h-8 rounded-full bg-[#875cff] border-2 border-white/10 hover:border-white/80 transition" title="Purple"></button>
                         <button onclick="applyCustomColor('#0082ff')" class="w-8 h-8 rounded-full bg-[#0082ff] border-2 border-white/10 hover:border-white/80 transition" title="Blue"></button>
                         <button onclick="applyCustomColor('#10b981')" class="w-8 h-8 rounded-full bg-[#10b981] border-2 border-white/10 hover:border-white/80 transition" title="Green"></button>
@@ -310,7 +309,7 @@
         </div>
     </div>
 
-    <div id="playlistModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
+    <div id="playlistModal" class="hidden fixed inset-0 bg-black/10 backdrop-blur-md z-50 flex items-center justify-center p-4">
         <div class="bg-dialogBg border border-borderColor rounded-2xl w-full max-w-sm shadow-2xl overflow-hidden">
             <div class="px-5 py-4 border-b border-borderColor/50 flex items-center justify-between bg-variant/20">
                 <h3 class="text-xs font-extrabold tracking-wide text-main uppercase">Thêm Playlist IPTV</h3>
@@ -334,7 +333,7 @@
         </div>
     </div>
 
-    <div id="epgModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
+    <div id="epgModal" class="hidden fixed inset-0 bg-black/10 backdrop-blur z-50 flex items-center justify-center p-4">
         <div class="bg-dialogBg border border-borderColor rounded-2xl w-full max-w-sm shadow-2xl overflow-hidden">
             <div class="px-5 py-4 border-b border-borderColor/50 flex items-center justify-between bg-variant/20">
                 <h3 class="text-xs font-extrabold text-main uppercase">Đồng Bộ Lịch EPG</h3>
@@ -669,7 +668,7 @@
 
         // ==================== SIDEBAR VIEW ====================
         function setSidebarView(view){currentSidebarView=view;const tc=document.getElementById("sidebarTabChannels"),te=document.getElementById("sidebarTabEpg"),cl=document.getElementById("channelList"),ec=document.getElementById("sidebarEpgContainer");if(view==='channels'){tc.className="flex-1 py-2 text-[11px] font-extrabold text-primary border-b-2 border-primary transition flex items-center justify-center gap-1";te.className="flex-1 py-2 text-[11px] font-extrabold text-muted border-b-2 border-transparent transition flex items-center justify-center gap-1";cl.classList.remove("hidden");ec.classList.add("hidden");}else{tc.className="flex-1 py-2 text-[11px] font-extrabold text-muted border-b-2 border-transparent transition flex items-center justify-center gap-1";te.className="flex-1 py-2 text-[11px] font-extrabold text-primary border-b-2 border-primary transition flex items-center justify-center gap-1";cl.classList.add("hidden");ec.classList.remove("hidden");updateSidebarEpgDisplay();}}
-        function updateSidebarEpgDisplay(){const c=document.getElementById("sidebarEpgContainer"),ch=currentActiveChannels[activeSlotIndex];if(!ch){c.innerHTML='<div class="text-center py-10 text-muted text-xs"><i class="fa-solid fa-calendar-xmark text-2xl mb-2 block"></i>Chưa chọn kênh.</div>';return;}const progs=getChannelEpgPrograms(ch);if(!progs||progs.length===0){c.innerHTML=`<div class="text-center py-10 text-muted text-xs"><p>Không có EPG cho: ${ch.name}</p></div>`;return;}const now=Date.now(),ap=getActiveProgram(progs),up=progs.filter(p=>p.stop>now-900000).slice(0,12);let h=`<h3 class="text-[9px] font-bold text-primary uppercase tracking-wider mb-2">Chương trình</h3><div class="space-y-1.5">`;up.forEach(p=>{const ss=new Date(p.start).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit'}),se=new Date(p.stop).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit'}),cur=ap&&p.start===ap.start;let ph='';if(cur){const pct=Math.min(100,Math.max(0,((now-p.start)/(p.stop-p.start))*100));ph=`<div class="w-full bg-borderInput/30 rounded-full h-1 mt-1 overflow-hidden"><div class="bg-primary h-full" style="width:${pct}%"></div></div>`;}h+=`<div class="p-2 rounded-lg ${cur?'bg-primary/10 border border-primary/30':'bg-variant/30 border border-transparent'}"><div class="flex justify-between items-center"><span class="text-[9px] font-bold ${cur?'text-primary':'text-primary-light'}">${ss}-${se}</span>${cur?'<span class="text-[9px] bg-primary text-white font-bold px-1 py-0.5 rounded-full"<>LIVE</span>':''}</div><h4 class="text-[13px] font-semibold mt-0.5 text-white/90">${p.title}</h4>${p.desc?`<p class="text-[11px] text-muted mt-0.5 line-clamp-2">${p.desc}</p>`:''}${ph}</div>`;});h+='</div>';c.innerHTML=h;}
+        function updateSidebarEpgDisplay(){const c=document.getElementById("sidebarEpgContainer"),ch=currentActiveChannels[activeSlotIndex];if(!ch){c.innerHTML='<div class="text-center py-10 text-muted text-xs"><i class="fa-solid fa-calendar-xmark text-2xl mb-2 block"></i>Chưa chọn kênh.</div>';return;}const progs=getChannelEpgPrograms(ch);if(!progs||progs.length===0){c.innerHTML=`<div class="text-center py-10 text-muted text-xs"><p>Không có EPG cho: ${ch.name}</p></div>`;return;}const now=Date.now(),ap=getActiveProgram(progs),up=progs.filter(p=>p.stop>now-900000).slice(0,12);let h=`<h3 class="text-[13px] font-bold text-primary uppercase tracking-wider mb-2">Lịch phát sóng</h3><div class="space-y-1.5">`;up.forEach(p=>{const ss=new Date(p.start).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit'}),se=new Date(p.stop).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit'}),cur=ap&&p.start===ap.start;let ph='';if(cur){const pct=Math.min(100,Math.max(0,((now-p.start)/(p.stop-p.start))*100));ph=`<div class="w-full bg-borderInput/30 rounded-full h-1 mt-1 overflow-hidden"><div class="bg-primary h-full" style="width:${pct}%"></div></div>`;}h+=`<div class="p-2 rounded-lg ${cur?'bg-primary/10 border border-primary/30':'bg-variant/30 border border-transparent'}"><div class="flex justify-between items-center"><span class="text-[9px] font-bold ${cur?'text-primary':'text-primary-auto'}">${ss}-${se}</span>${cur?'<span class="text-[9px] bg-primary text-primary-light font-bold px-1 py-0.5 rounded-full">LIVE</span>':''}</div><h4 class="text-[13px] font-semibold mt-0.5 text-primary/90">${p.title}</h4>${p.desc?`<p class="text-[11px] text-muted mt-0.5 line-clamp-2">${p.desc}</p>`:''}${ph}</div>`;});h+='</div>';c.innerHTML=h;}
 
         // ==================== MULTIVIEW ====================
         function setupPlaybackInteractions(si){const v=document.getElementById(`videoPlayer${si}`),c=document.getElementById(`mvSlot${si}`);if(!v||!c)return;c.addEventListener('dblclick',e=>{const r=c.getBoundingClientRect(),x=e.clientX-r.left;if(x<r.width*0.4){seekRelative(si,-10);showSeekFeedback(si,'left');}else if(x>r.width*0.6){seekRelative(si,10);showSeekFeedback(si,'right');}});}
@@ -726,4 +725,3 @@
     </script>
 <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a209b44b3c2a02a9',t:'MTc4NDk2NzE5NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2109fb92ab50655',t:'MTc4NTAzOTc1Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2461fd24c5edd8a',t:'MTc4NTYwMDc0NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
